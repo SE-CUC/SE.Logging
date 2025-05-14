@@ -9,6 +9,12 @@
     <Import_RootNamespace>IngameScript</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Class1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\EchoLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILoggable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SurfaceLogger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
   </ItemGroup>
 </Project>
