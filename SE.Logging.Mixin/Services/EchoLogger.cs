@@ -8,6 +8,9 @@ namespace IngameScript
 
         public EchoLogger(Action<string> echoAction)
         {
+            if (echoAction == null) 
+                throw new ArgumentNullException(nameof(echoAction));
+
             _echoAction = echoAction;
         }
 

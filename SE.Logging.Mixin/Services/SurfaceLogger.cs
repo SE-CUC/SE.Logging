@@ -11,6 +11,9 @@ namespace IngameScript
 
         public SurfaceLogger(IMyTextSurface surface, Action<IMyTextSurface> configuration = null)
         {
+            if(surface == null)
+                throw new ArgumentNullException(nameof(surface));
+            
             _surface = surface;
 
             Configure(surface, configuration);

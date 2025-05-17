@@ -19,21 +19,18 @@ namespace IngameScript
 {
     partial class Program : MyGridProgram
     {
-        
+        ILoggable _logger;
 
         public Program()
         {
-            
-        }
+            _logger = new SurfaceLogger(Me.GetSurface(0));//will use PB screen as logger surface
 
-        public void Save()
-        {
-            
+            _logger.Clear();
         }
 
         public void Main(string argument, UpdateType updateSource)
         {
-            
+            _logger.LogLine(argument);
         }
     }
 }
