@@ -19,8 +19,7 @@ namespace IngameScript
 {
     partial class Program : MyGridProgram
     {
-        ILoggable _logger;
-
+        
         public Program()
         {
             _logger = new SurfaceLogger(Me.GetSurface(0));//will use PB screen as logger surface
