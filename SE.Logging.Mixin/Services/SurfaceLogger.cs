@@ -11,15 +11,15 @@ namespace IngameScript
 
         public SurfaceLogger(IMyTextSurface surface, Action<IMyTextSurface> configuration = null)
         {
-            if(surface == null)
+            if (surface == null)
                 throw new ArgumentNullException(nameof(surface));
-            
+
             _surface = surface;
 
             Configure(surface, configuration);
         }
 
-        public void Clear() => _surface.WriteText(string.Empty);         
+        public void Clear() => _surface.WriteText(string.Empty);
 
         public void Log(string message) => _surface.WriteText(message, true);
 

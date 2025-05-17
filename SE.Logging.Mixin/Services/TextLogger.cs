@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace IngameScript
 {
     public class TextLogger : ILoggable
     {
-        private readonly StringBuilder _builder = new StringBuilder(50,5000);
+        private readonly StringBuilder _builder = new StringBuilder(50, 5000);
 
         public void Clear() => _builder.Clear();
 
